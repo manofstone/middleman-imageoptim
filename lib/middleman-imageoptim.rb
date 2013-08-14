@@ -10,7 +10,6 @@ module MiddlemanImageoptim
       app.set :threads, true
       app.set :image_extensions, %w(.png .jpg .gif)
       app.set :pngcrush_options, {:chunks => ['alla'], :fix => false, :brute => false}
-      app.set :pngout_options, {:copy_chunks => false, :strategy => 0}
       app.set :optipng_options, {:level => 6, :interlace => false}
       app.set :advpng_options, {:level => 4}
       app.set :jpegoptim_options, {:strip => ['all'], :max_quality => 100}
@@ -22,7 +21,6 @@ module MiddlemanImageoptim
           :nice => nice,
           :threads => threads,
           :pngcrush => pngcrush_options,
-          :pngout => pngout_options,
           :optipng => optipng_options,
           :advpng => advpng_options,
           :jpegoptim => jpegoptim_options,
